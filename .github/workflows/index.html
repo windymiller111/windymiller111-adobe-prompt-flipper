@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adobe Prompt Flipper</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        adobe: {
+                            50: '#f0f5ff',
+                            100: '#e0ebff',
+                            200: '#c7d8ff',
+                            300: '#a5beff',
+                            400: '#8195ff',
+                            500: '#5e6bff',
+                            600: '#3d40ff',
+                            700: '#2b2beb',
+                            800: '#2424c4',
+                            900: '#24249b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 min-h-screen text-gray-100">
+    <custom-header></custom-header>
+    
+    <main class="container mx-auto px-4 py-12">
+        <h1 class="text-4xl font-bold mb-2 text-adobe-400">Prompt Library</h1>
+        <p class="text-gray-400 mb-12">Click any tile to reveal the prompt</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Tile 1 -->
+            <div class="prompt-card" data-prompt="Summarise the latest news, press releases, and annual report highlights for [Customer Name]. Focus on their digital transformation initiatives, marketing priorities, and any recent leadership changes. Provide insights that could influence Adobe DX solutions adoption.">
+                <div class="prompt-card-front bg-gradient-to-br from-adobe-800 to-adobe-900">
+                    <h3>Customer Overview & Key Priorities</h3>
+                    <i data-feather="chevron-down" class="mt-4"></i>
+                </div>
+                <div class="prompt-card-back bg-gray-800">
+                    <p class="prompt-text"></p>
+                    <button class="copy-btn absolute bottom-4 right-4 p-2 rounded-full bg-adobe-700 hover:bg-adobe-600 transition">
+                        <i data-feather="copy"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tile 2 -->
+            <div class="prompt-card" data-prompt="Search LinkedIn for [Customer Name]'s marketing and IT leadership team. Summarise their roles, recent posts, and any mentions of marketing automation or customer experience. Highlight potential champions for Adobe DX solutions.">
+                <div class="prompt-card-front bg-gradient-to-br from-adobe-800 to-adobe-900">
+                    <h3>LinkedIn Insights for Stakeholder Mapping</h3>
+                    <i data-feather="chevron-down" class="mt-4"></i>
+                </div>
+                <div class="prompt-card-back bg-gray-800">
+                    <p class="prompt-text"></p>
+                    <button class="copy-btn absolute bottom-4 right-4 p-2 rounded-full bg-adobe-700 hover:bg-adobe-600 transition">
+                        <i data-feather="copy"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tile 3 -->
+            <div class="prompt-card" data-prompt="Find the top 3 current industry trends affecting [Customer Name]'s sector. Explain how these trends could create opportunities for Adobe's Digital Experience solutions, especially in marketing automation and content personalisation.">
+                <div class="prompt-card-front bg-gradient-to-br from-adobe-800 to-adobe-900">
+                    <h3>Industry Trends Impacting [Customer Name]</h3>
+                    <i data-feather="chevron-down" class="mt-4"></i>
+                </div>
+                <div class="prompt-card-back bg-gray-800">
+                    <p class="prompt-text"></p>
+                    <button class="copy-btn absolute bottom-4 right-4 p-2 rounded-full bg-adobe-700 hover:bg-adobe-600 transition">
+                        <i data-feather="copy"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tile 4 -->
+            <div class="prompt-card" data-prompt="Identify [Customer Name]'s top competitors and summarise their recent digital marketing strategies from public sources. Highlight gaps or opportunities where Adobe DX could give [Customer Name] a competitive edge.">
+                <div class="prompt-card-front bg-gradient-to-br from-adobe-800 to-adobe-900">
+                    <h3>Competitor Benchmarking</h3>
+                    <i data-feather="chevron-down" class="mt-4"></i>
+                </div>
+                <div class="prompt-card-back bg-gray-800">
+                    <p class="prompt-text"></p>
+                    <button class="copy-btn absolute bottom-4 right-4 p-2 rounded-full bg-adobe-700 hover:bg-adobe-600 transition">
+                        <i data-feather="copy"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tile 5 -->
+            <div class="prompt-card" data-prompt="Draft a conversation guide for moving [Customer Name] from a single Adobe solution (e.g., Analytics) to a full marketing automation transformation. Include discovery questions, value propositions, and examples of measurable business outcomes.">
+                <div class="prompt-card-front bg-gradient-to-br from-adobe-800 to-adobe-900">
+                    <h3>Expanding from Point Solution to Transformation</h3>
+                    <i data-feather="chevron-down" class="mt-4"></i>
+                </div>
+                <div class="prompt-card-back bg-gray-800">
+                    <p class="prompt-text"></p>
+                    <button class="copy-btn absolute bottom-4 right-4 p-2 rounded-full bg-adobe-700 hover:bg-adobe-600 transition">
+                        <i data-feather="copy"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tile 6 -->
+            <div class="prompt-card" data-prompt="Analyse [Customer Name]'s website and recent customer reviews. Identify pain points in personalisation, content delivery, or campaign execution. Suggest how Adobe Experience Cloud can address these challenges.">
+                <div class="prompt-card-front bg-gradient-to-br from-adobe-800 to-adobe-900">
+                    <h3>Customer Experience Pain Points</h3>
+                    <i data-feather="chevron-down" class="mt-4"></i>
+                </div>
+                <div class="prompt-card-back bg-gray-800">
+                    <p class="prompt-text"></p>
+                    <button class="copy-btn absolute bottom-4 right-4 p-2 rounded-full bg-adobe-700 hover:bg-adobe-600 transition">
+                        <i data-feather="copy"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tile 7 -->
+            <div class="prompt-card" data-prompt="Create a compelling ROI narrative for [Customer Name] showing the benefits of moving from manual campaign execution to Adobe's automated marketing workflows. Include metrics like time saved, conversion uplift, and cost efficiency.">
+                <div class="prompt-card-front bg-gradient-to-br from-adobe-800 to-adobe-900">
+                    <h3>Marketing Automation ROI Story</h3>
+                    <i data-feather="chevron-down" class="mt-4"></i>
+                </div>
+                <div class="prompt-card-back bg-gray-800">
+                    <p class="prompt-text"></p>
+                    <button class="copy-btn absolute bottom-4 right-4 p-2 rounded-full bg-adobe-700 hover:bg-adobe-600 transition">
+                        <i data-feather="copy"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tile 8 -->
+            <div class="prompt-card" data-prompt="Generate a one-page executive briefing for [Customer Name]'s CMO and CIO. Include their strategic priorities (from annual reports and news), Adobe DX value alignment, and 3 tailored talking points for the upcoming meeting.">
+                <div class="prompt-card-front bg-gradient-to-br from-adobe-800 to-adobe-900">
+                    <h3>Executive Briefing Pack</h3>
+                    <i data-feather="chevron-down" class="mt-4"></i>
+                </div>
+                <div class="prompt-card-back bg-gray-800">
+                    <p class="prompt-text"></p>
+                    <button class="copy-btn absolute bottom-4 right-4 p-2 rounded-full bg-adobe-700 hover:bg-adobe-600 transition">
+                        <i data-feather="copy"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tile 9 -->
+            <div class="prompt-card" data-prompt="Based on [Customer Name]'s industry and size, create 3 personalised use cases for Adobe Experience Cloud. Each should include the business challenge, Adobe solution, and expected outcome.">
+                <div class="prompt-card-front bg-gradient-to-br from-adobe-800 to-adobe-900">
+                    <h3>Personalised Use Case Development</h3>
+                    <i data-feather="chevron-down" class="mt-4"></i>
+                </div>
+                <div class="prompt-card-back bg-gray-800">
+                    <p class="prompt-text"></p>
+                    <button class="copy-btn absolute bottom-4 right-4 p-2 rounded-full bg-adobe-700 hover:bg-adobe-600 transition">
+                        <i data-feather="copy"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tile 10 -->
+            <div class="prompt-card" data-prompt="Gather recent social media mentions of [Customer Name] and analyse sentiment around their brand experience. Suggest how Adobe DX solutions could improve customer engagement and perception.">
+                <div class="prompt-card-front bg-gradient-to-br from-adobe-800 to-adobe-900">
+                    <h3>Social Listening & Sentiment Analysis</h3>
+                    <i data-feather="chevron-down" class="mt-4"></i>
+                </div>
+                <div class="prompt-card-back bg-gray-800">
+                    <p class="prompt-text"></p>
+                    <button class="copy-btn absolute bottom-4 right-4 p-2 rounded-full bg-adobe-700 hover:bg-adobe-600 transition">
+                        <i data-feather="copy"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+</body>
+</html>
